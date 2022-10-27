@@ -11,3 +11,7 @@ Os links usados para instalar o Jenkins, foram:
 
 ## Primeiros passos <a name="firstSteps"></a>
 - https://www.youtube.com/watch?v=7KCS70sCoK0&t=662s
+
+## Links importantes <a name="firstSteps"></a>
+Para saber quais as variáveis de ambientes disponíveis no Jenkins, basta acessar:
+- http://localhost:8080/env-vars.html/
