@@ -11,7 +11,7 @@ pipeline {
                 // sh 'cd C:/ProgramData/Jenkins/.jenkins/workspace/first-pipeline_develop/frontend/app'
                 // sh 'npm install'
                 // sh 'ng build'
-                sh 'ls'
+                bat 'dir'
             }
         }
         stage('Test') {
