@@ -6,11 +6,6 @@ pipeline {
     }
     stages {
         stage('Build Angular') {
-            when {
-                expression {
-                    env.BRANCH_NAME == 'develop'
-                }
-            }
             steps {
                 echo 'Starting the Angular build...'
                 sh 'cd C:/ProgramData/Jenkins/.jenkins/workspace/first-pipeline_develop/frontend/app'
