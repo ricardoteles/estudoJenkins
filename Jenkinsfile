@@ -5,9 +5,17 @@ pipeline {
         booleanParam(name: 'executeTests', defaultValue: true, description: 'do you like to execute tests?')
     }
     stages {
-        stage('Build') {
+        stage('Build Angular') {
+            when {
+                expression {
+                    env.BRANCH_NAME == 'develop'
+                }
+            }
             steps {
-                echo 'Building..'
+                echo 'Starting the Angular build...'
+                sh 'cd ~/Desktop/estudo/estudoJenkins/frontend/app'
+                sh 'npm install'
+                sh 'ng build'
             }
         }
         stage('Test') {
