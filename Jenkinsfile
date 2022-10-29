@@ -8,10 +8,9 @@ pipeline {
         stage('Build Angular') {
             steps {
                 echo 'Starting the Angular build...'
-                // sh 'cd C:/ProgramData/Jenkins/.jenkins/workspace/first-pipeline_develop/frontend/app'
-                // sh 'npm install'
-                // sh 'ng build'
-                bat 'dir'
+                bat 'cd frontend\app'
+                bat 'npm install'
+                bat 'ng build'
             }
         }
         stage('Test') {
