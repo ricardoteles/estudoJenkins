@@ -9,6 +9,8 @@ pipeline {
             steps {
                 echo 'Starting the Angular build...'
                 bat 'cd frontend\\app && npm install'
+                bat 'cd frontend\\app && ng lint'
+                bat 'cd frontend\\app && npm run test --watch=false'
                 bat 'cd frontend\\app && ng build'
             }
         }
