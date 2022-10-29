@@ -13,9 +13,9 @@ pipeline {
             }
             steps {
                 echo 'Starting the Angular build...'
-                bat 'cd ~/Desktop/estudo/estudoJenkins/frontend/app'
-                bat 'npm install'
-                bat 'ng build'
+                sh 'cd C:/ProgramData/Jenkins/.jenkins/workspace/first-pipeline_develop/frontend/app'
+                sh 'npm install'
+                sh 'ng build'
             }
         }
         stage('Test') {
