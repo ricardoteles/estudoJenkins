@@ -10,7 +10,7 @@ pipeline {
                 echo 'Starting the Angular build...'
                 bat 'cd frontend\\app && npm install'
                 bat 'cd frontend\\app && ng lint'
-                bat 'cd frontend\\app &&  ng test --sourceMap=false --browsers=ChromeHeadless --watch=false'
+                bat 'cd frontend\\app &&  ng test --browsers=ChromeHeadless --watch=false'
                 bat 'cd frontend\\app && ng build'
             }
         }
