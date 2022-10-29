@@ -8,9 +8,8 @@ pipeline {
         stage('Build Angular') {
             steps {
                 echo 'Starting the Angular build...'
-                bat 'cd frontend\\app'
-                bat 'npm install'
-                bat 'ng build'
+                bat 'cd frontend\\app && npm install'
+                bat 'cd frontend\\app && ng build'
             }
         }
         stage('Test') {
